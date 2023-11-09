@@ -34,6 +34,8 @@ class UserOrderService {
 
 // KISS 원칙 적용 후.
 // 기능 분리해서 여러 클래스로 쪼갬
+
+// 사용자의 데이터베이스에서 사용자를 받아옴.
 class UserService {
     userDb;
     getUser() {
@@ -41,6 +43,7 @@ class UserService {
     }
 }
 
+//주문을 받는기능, 주문을 업데이트 하는 기능
 class OrderService {
     orderDb;
     createOrder(user, product) { }
@@ -52,6 +55,7 @@ class OrderService {
     }
 }
 
+//결제 프로세스 처리기능
 class paymentClient {
     paymentClient;
     processPayment(orderRequest) {
